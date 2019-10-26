@@ -19,6 +19,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
   />
   <link rel="stylesheet" type="text/css" href="css/submit-button.css">
+  <link rel="stylesheet" type="text/css" href="css/card-generation.css">
   <style>
     body,
     h1,
@@ -547,19 +548,19 @@
               <input class="w3-input w3-border" name="Summoner" type="text"></p>
 
               <p><i class="fa fa-location-arrow w3-small w3-center"></i> <label>Preferred Positions</label></br>
-              <input type="checkbox" class="check_box_top" id="checkbox1">
+              <input type="checkbox" class="check_box_top" id="checkbox1" onclick="laneButton(1)">
               <label for="checkbox1"></label>
 
-              <input type="checkbox" class="check_box_jungle" id="checkbox2">
+              <input type="checkbox" class="check_box_jungle" id="checkbox2" onclick="laneButton(2)">
               <label for="checkbox2"></label>
 
-              <input type="checkbox" class="check_box_mid" id="checkbox3">
+              <input type="checkbox" class="check_box_mid" id="checkbox3" onclick="laneButton(3)">
               <label for="checkbox3"></label>
 
-              <input type="checkbox" class="check_box_bot" id="checkbox4">
+              <input type="checkbox" class="check_box_bot" id="checkbox4" onclick="laneButton(4)">
               <label for="checkbox4"></label>
 
-              <input type="checkbox" class="check_box_support" id="checkbox5">
+              <input type="checkbox" class="check_box_support" id="checkbox5" onclick="laneButton(5)">
               <label for="checkbox5"></label>
             
               <!-- <p><i class="fa fa-location-arrow w3-small w3-center"></i> <label>Preferred Positions</label></br>
@@ -593,15 +594,53 @@
             </form>
 
         </div>
-        <div class="w3-col m6">
-          <img
+        <div class="w3-col m6 w3-margin-top">
+            <div class="w3-card-4" style="width:80%;">
+              <div class="w3-row">
+                <div class="w3-col m6">
+                  <header class="w3-container w3-margin-left w3-margin-top">
+                    <h1 class="name-card">Malibu Schnapps</h1>
+                    <h2 class="name-card">Platinum III</h3>
+                  </header>
+              
+                  <div class="w3-container">
+                    <div class="w3-row w3-margin-left">
+                        <img class="w3-image w3-round-small" src="./roles/50/top.png" alt="top role" id="top icon" style="display: none;"/>
+                        <img class="w3-image w3-round-small" src="./roles/50/jungle.png" alt="jungle role" id="jungle icon" style="display: none;"/>
+                        <img class="w3-image w3-round-small" src="./roles/50/mid.png" alt="mid role" id="mid icon" style="display: none;"/>
+                        <img class="w3-image w3-round-small" src="./roles/50/bot.png" alt="bot role" id="bot icon" style="display: none;"/>
+                        <img class="w3-image w3-round-small" src="./roles/50/support.png" alt="support role" id="support icon" style="display: none;"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="w3-col m6 w3-light-grey">
+                    <img class="w3-image w3-round-small" src="./ranks/Plat_1.png" alt="rank icon" 
+                    width="160" style="display: block;margin-left: auto;margin-right: auto;"/>
+                    <h1 class="name-card" style="text-align: center;">Victor Farrell</h1>
+
+                </div>
+              </div>
+                
+            
+                <footer class="w3-container card-footer w3-margin-bottom w3-margin-top w3-padding-24">
+                    <div class="w3-row w3-margin-left">
+                      <h5 class="card-footer">Discord: https://discord.gg/DaXpFF</h5>
+                      <h5 class="card-footer">Region: <img class="w3-image w3-round-small" src="./images/na-lcs.jpg" alt="region" 
+                        width="25"/></h5>
+                    </div>
+                </footer>
+              </div>
+
+          <!-- <img
             class="w3-image w3-round-large"
             src="./cards/business-card-plat.jpg"
             alt="LCS business card"
             width="700"
             height="394"
-          />
+          /> -->
         </div>
+        
+        
       </div>
     </div>
 
@@ -726,6 +765,53 @@
       // Close the sidebar with the close button
       function w3_close() {
         mySidebar.style.display = "none";
+      }
+
+      function laneButton(num) {
+        switch(num) {
+          case 1:
+            var x = document.getElementById("top icon");
+            if (x.style.display === "none") {
+              x.style.display = "inline-block";
+            } else {
+              x.style.display = "none";
+            }
+            break;
+          case 2:
+            var x = document.getElementById("jungle icon");
+            if (x.style.display === "none") {
+              x.style.display = "inline-block";
+            } else {
+              x.style.display = "none";
+            }
+            break;
+          case 3:
+            var x = document.getElementById("mid icon");
+            if (x.style.display === "none") {
+              x.style.display = "inline-block";
+            } else {
+              x.style.display = "none";
+            }
+            break;
+          case 4:
+            var x = document.getElementById("bot icon");
+            if (x.style.display === "none") {
+              x.style.display = "inline-block";
+            } else {
+              x.style.display = "none";
+            }
+            break;
+          case 5:
+            var x = document.getElementById("support icon");
+            if (x.style.display === "none") {
+              x.style.display = "inline-block";
+            } else {
+              x.style.display = "none";
+            }
+            break;
+          default:
+            // code block
+        }
       }
     </script>
   </body>
