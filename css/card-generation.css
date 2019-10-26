@@ -1,0 +1,11 @@
+.card-footer {
+  background-color: #92a2ff; /* Green */
+  color: white;
+  font-family: "Georgia", serif;
+  line-height: 1;
+}
+.name-card {
+  font-family: "Georgia", serif;
+  margin: 3px;
+  line-height: 1.2;
+}
